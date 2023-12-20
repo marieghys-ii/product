@@ -1,0 +1,85 @@
+:root {
+    --primary-dark-cyan:hsl(158, 36%, 37%);
+    --primary-Cream: hsl(30, 38%, 92%);
+    --neutral-Very-dark-blue: hsl(212, 21%, 14%);
+    --neutral-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --neutral-White: hsl(0, 0%, 100%);
+    --body-copy-Font-size: 14px;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(https://fonts.google.com/specimen/Montserrat);
+}
+
+body{
+    background-color: var(--primary-Cream);
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 10px;
+}
+
+.card .left{
+    flex-basis: 1; 
+}
+
+.card .left img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card .right {
+    background-color: var(--neutral-White);
+    width: 50%;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 16px;
+}
+
+.card .right b{
+    color: var(--primary-dark-cyan);
+    font-size: 32px;
+    margin-bottom: 3rem;
+}
+
+.card .right button{
+    background-color: var(--primary-dark-cyan);
+    color: var(--neutral-White);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 1.2rem;
+    width: 100%;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .right button:hover{
+    /* background-color: red; */
+    box-shadow: 5px 10px 30px var(--neutral-Dark-grayish-blue);
+
+}
+
+@media (max-width:375px) {
+    .card{
+        flex-wrap: wrap;
+    }
+
+    .card .right{
+        width: 100%;
+    }
+}
